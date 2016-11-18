@@ -25,10 +25,11 @@ var selectParentArtboards = function(context) {
   while (object = selectionLoop.nextObject()) {
     var artboard = artboardForObject(object);
     if (artboard != null) {
+     object.select_byExpandingSelection(false, true);
       artboardsToSelect.push(artboard);
     }
   }
-  page.deselectAllLayers();
+  // page.deselectAllLayers();
 
   for (var i = 0; i < artboardsToSelect.length; i++) {
     var artboard = artboardsToSelect[i];
