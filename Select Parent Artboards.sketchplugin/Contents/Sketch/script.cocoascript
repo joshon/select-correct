@@ -1,24 +1,23 @@
 // Helper functions:
-
+var outer = false;
 var artboardForObject = function(object) {
   if (object.isKindOfClass(MSArtboardGroup)) {
-    log('opg:' + object.parentGroup());
-    if(!object.parentGroup().isKindOfClass(MSArtboardGroup)) {
-      log('THIS IS THE PAGE ?');
-      return null;
+    if(outer && object.name().toLowerCase() == 'outer'){
+        log('outer');
+        return null;
     }
     return object;
   } else if (object.parentGroup() != null) {
     return artboardForObject(object.parentGroup());
   } else {
-    // return null;
+    return null;
   }
 };
 
 
 // Handlers:
 
-var selectParentArtboards = function(context) {
+var selectCorrectBase = function(context) {
   log('selectParentArtboards');
   var selection = context.selection;
   var doc = context.document;
@@ -42,3 +41,14 @@ var selectParentArtboards = function(context) {
     artboard.select_byExpandingSelection(true, true);
   }
 }
+
+var selectCorrectOuter = function(context) {
+  outer = true;
+  selectCorrectBase(context);
+}
+
+var selectCorrect = function(context) {
+  outer = false;
+  selectCorrectBase(context);
+}
+
