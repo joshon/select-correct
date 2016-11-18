@@ -4,7 +4,7 @@
     {
       "script" : "script.cocoascript",
       "handler" : "selectCorrect",
-      "shortcut" : "cmd ctrl a",
+      "shortcut" : "cmd ctrl q",
       "name" : "Select Correct",
       "identifier" : "selectCorrect"
     },
