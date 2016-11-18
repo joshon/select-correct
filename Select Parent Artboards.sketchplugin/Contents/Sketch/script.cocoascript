@@ -2,6 +2,7 @@
 
 var artboardForObject = function(object) {
   if (object.isKindOfClass(MSArtboardGroup)) {
+  log('opg:' + object.parentGroup());
     if(object.parentGroup().isPage()) {
      return null;
     }
@@ -17,6 +18,7 @@ var artboardForObject = function(object) {
 // Handlers:
 
 var selectParentArtboards = function(context) {
+  log('selectParentArtboards');
   var selection = context.selection;
   var doc = context.document;
   var page = doc.currentPage();
