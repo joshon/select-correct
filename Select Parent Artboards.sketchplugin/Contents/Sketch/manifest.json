@@ -22,9 +22,9 @@
       "selectCorrectOuter"
     ]
   },
-  "identifier" : "com.nefaurk.sketch-plugins.selectParentArtboards",
+  "identifier" : "org.betterstatistics.sketch-plugins.selectCorrect",
   "version" : "1.0",
   "description" : "Selects the parent artboards of the current selection",
   "authorEmail" : "nefaurk@gmail.com",
-  "name" : "Select Parent Artboards"
+  "name" : "Select Correct"
 }
