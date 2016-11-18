@@ -2,6 +2,9 @@
 
 var artboardForObject = function(object) {
   if (object.isKindOfClass(MSArtboardGroup)) {
+    if(object.parentGroup().isPage()) {
+     return null;
+    }
     return object;
   } else if (object.parentGroup() != null) {
     return artboardForObject(object.parentGroup());
