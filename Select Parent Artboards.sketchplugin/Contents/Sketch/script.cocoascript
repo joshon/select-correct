@@ -11,7 +11,7 @@ var artboardForObject = function(object) {
   } else if (object.parentGroup() != null) {
     return artboardForObject(object.parentGroup());
   } else {
-    return null;
+    // return null;
   }
 };
 
