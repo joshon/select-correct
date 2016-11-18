@@ -1,17 +1,25 @@
 {
-  "author" : "Nefaur Khandker",
+  "author" : "Nefaur Khandker, modified by Josh On",
   "commands" : [
     {
       "script" : "script.cocoascript",
-      "handler" : "selectParentArtboards",
+      "handler" : "selectCorrect",
       "shortcut" : "cmd ctrl a",
-      "name" : "Select Parent Artboards",
-      "identifier" : "selectParentArtboards"
+      "name" : "Select Correct",
+      "identifier" : "selectCorrect"
+    },
+    {
+      "script" : "script.cocoascript",
+      "handler" : "selectCorrectOuter",
+      "shortcut" : "ctrl q",
+      "name" : "Select Correct Outer",
+      "identifier" : "selectCorrectOuter"
     }
   ],
   "menu": {
     "items": [
-      "selectParentArtboards"
+      "selectCorrect",
+      "selectCorrectOuter"
     ]
   },
   "identifier" : "com.nefaurk.sketch-plugins.selectParentArtboards",
