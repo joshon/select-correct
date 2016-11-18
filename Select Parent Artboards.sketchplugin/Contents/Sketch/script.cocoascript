@@ -3,8 +3,8 @@
 var artboardForObject = function(object) {
   if (object.isKindOfClass(MSArtboardGroup)) {
     log('opg:' + object.parentGroup());
-    if(object.parentGroup().isKindOfClass(MSPage)) {
-      log('THIS IS THE PAGE');
+    if(!object.parentGroup().isKindOfClass(MSArtboardGroup)) {
+      log('THIS IS THE PAGE ?');
       return null;
     }
     return object;
