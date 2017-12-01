@@ -4,14 +4,14 @@
     {
       "script" : "script.cocoascript",
       "handler" : "selectCorrect",
-      "shortcut" : "cmd ctrl q",
+      "shortcut" : "cmd ctrl `",
       "name" : "Select Correct",
       "identifier" : "selectCorrect"
     },
     {
       "script" : "script.cocoascript",
       "handler" : "selectCorrectOuter",
-      "shortcut" : "ctrl q",
+      "shortcut" : "ctrl `",
       "name" : "Select Correct Outer",
       "identifier" : "selectCorrectOuter"
     }
